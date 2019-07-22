@@ -1,0 +1,18 @@
+﻿<Window x:Class="WinBackUpConf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WinBackUpConf"
+        mc:Ignorable="d"
+        Title="WinBackUpConf 0.0.1" Height="450" Width="800">
+    <Grid>
+        <Frame x:Name="frame" Content="" HorizontalAlignment="Left" Height="201" Margin="19,18,0,0" VerticalAlignment="Top" Width="466"/>
+        <CheckBox x:Name="NetDrives" Content="Net Drives" HorizontalAlignment="Left" Margin="27,27,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Button x:Name="btnBackUp" Content="BackUp!" HorizontalAlignment="Left" Margin="61,302,0,0" VerticalAlignment="Top" Width="75" Click="BtnBackUp_Click"/>
+        <Label x:Name="lblFile" Content="File:" HorizontalAlignment="Left" Margin="27,241,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.005,-0.612"/>
+        <TextBox x:Name="txtFile" HorizontalAlignment="Left" Height="23" Margin="63,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404"/>
+        <Button x:Name="btnBrowse" Content="Browse..." HorizontalAlignment="Left" Margin="483,245,0,0" VerticalAlignment="Top" Width="75" Click="BtnBrowse_Click"/>
+
+    </Grid>
+</Window>
