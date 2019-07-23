@@ -31,6 +31,7 @@ namespace WinBackUpConf
         private void BtnBackUp_Click(object sender, RoutedEventArgs e)
         {
             CurrentConfiguration.Save(txtFile.Text);
+            MessageBox.Show("Configuration Backupped Correctly!");
         }
 
         private void BtnBrowse_Click(object sender, RoutedEventArgs e)
@@ -39,6 +40,24 @@ namespace WinBackUpConf
             f.Filter = "WinBackUpConf file (*.wbc)|*.wbc";
             f.ShowDialog();
             txtFile.Text = f.FileName;
+        }
+
+        public class lstEventsItem
+        {
+            public String Date { get; set; }
+            public String Command { get; set; }
+            public String Output { get; set; }
+        }
+
+        public void addItemToEventList(String command, String output)
+        {
+            lstEvents.Items.Add(new lstEventsItem { Date = DateTime.Now.ToShortTimeString(), Command = command, Output = output });
+        }
+
+        private void BtnRestore_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentConfiguration = new Configuration(txtFile.Text);
+            MessageBox.Show("Configuration Restored Correctly!");
         }
     }
 }

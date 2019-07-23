@@ -1,0 +1,1 @@
+﻿wmic netuse where LocalName="P:" get UserName /value
